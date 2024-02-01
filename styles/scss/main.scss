@@ -1,0 +1,169 @@
+@import './_null.scss';
+
+body {
+	font-family: 'TT Firs Neue Trial Var Roman', sans-serif;
+	background-color: black;
+}
+
+.container {
+	max-width: 342px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: white;
+	overflow: hidden;
+}
+.block {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 0 0 30px 0;
+
+		&__content {
+			margin-top: 35px;
+		}
+
+		&__slider {
+			padding: 20px 0 0 0;
+		}
+}
+.content-block {
+
+		&__title {
+			width: 75%;
+		}
+
+		&__text {
+			margin-top: 20px;
+		}
+}
+.slider-block {
+
+	&__body {
+
+		position: relative;
+
+		& .swiper-slide {
+			aspect-ratio: 280/350;
+			border-radius: 20px;
+			background-size: cover;
+			width: 85%;
+		}
+
+		&.swiper {
+			width: 85%!important;
+			margin: 0;
+			overflow: visible;
+
+		} 
+
+		&.swiper-c {
+			width: 95%!important;
+		}
+
+		& .swiper-pagination {
+			top: -25px!important;
+			height: fit-content;
+		} 
+		
+		span.swiper-pagination-bullet {
+			width: 50px;
+			border-radius: 4px;
+			height: 5px;
+			transition: all 0.3s ease;
+
+			&.swiper-pagination-bullet-active {
+				background: linear-gradient(90deg, rgba(0,0,0,0.2) 41%, rgba(29,97,253,1) 45%, rgba(252,132,57,1) 48%, rgba(0,0,0,0.2) 52%);
+				background-size: 100px;
+				background-position: -100% -100%;
+				animation: gradient-animation 3s linear forwards;
+			}
+		}
+	}
+}
+.primary-title {
+	font-family: 'TT Firs Neue Trl', sans-serif;
+	font-size: 34px;
+	font-weight: 700;
+}
+.text {
+	font-family: 'TT Firs Neue Trl', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.2em;
+
+	b {
+		font-weight: 600;
+	}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+
+	&__msg {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		border-radius: 0 20px 20px 20px;
+	}
+
+	&__attrs span, &__msg, &__button {
+		font-size: 16px;
+		width: 80%;
+		background-color: #ffffffb3;
+		padding: 12px 16px;
+		border-radius: 20px;
+	}
+
+	&__attrs span.speech {
+
+		border-radius: 0 40px 40px 40px;
+	}
+
+	&__attrs {
+		position: absolute;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3px;
+		bottom: 7px;
+		left: 5px;
+
+		& span {
+			display: block;
+			width: fit-content;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		display: flex;
+		text-decoration: none;
+		align-items: center;
+		gap: 15px;
+		color: black;
+		width: fit-content;
+		cursor: pointer;
+	}
+}
+.container_black {
+	background-color: black;
+}
+.white {
+	color: white;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 150% 150%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: -20% 70%;
+	}
+}
